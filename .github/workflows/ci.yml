@@ -22,6 +22,7 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore 
+        working-directory: backend/GameBackend/API
 
       - name: Build project
         run: dotnet build --configuration Release 

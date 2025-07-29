@@ -25,7 +25,8 @@ jobs:
         working-directory: backend/GameBackend/API
 
       - name: Build project
-        run: dotnet build --configuration Release 
+        run: dotnet build GameBackend.sln --configuration Release 
+        working-directory: backend/GameBackend/
 
       - name: Run tests
         run: dotnet test --configuration Release 

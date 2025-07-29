@@ -51,7 +51,7 @@ public class GameControllerTests : IClassFixture<GameControllerFixture>
         var okResult = Assert.IsType<OkObjectResult>(result);
         var gameDto = Assert.IsType<GameDto>(okResult.Value);
 
-        Assert.Equal("X", gameDto.BoardState[0]);  // X первый ход
+        Assert.Equal("X", gameDto.BoardState[0]);  /// X первый ход
         Assert.True(context.Response.Headers.ContainsKey("ETag"));
     }
 }
